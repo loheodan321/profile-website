@@ -1,9 +1,14 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import './App.css';
+import React, { useCallback, useMemo, useState } from 'react';
+import { SApp } from './app-style';
+import Header from './components/Header/header';
+import Home from './components/Home/home';
 
 function App() {
-  return <div></div>;
+  return (
+    <>
+      <div>con cặc</div>
+    </>
+  );
 }
 
 export default App;

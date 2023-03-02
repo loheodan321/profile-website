@@ -1,10 +1,37 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { SApp } from './app-style';
+import ErrorPage from './components/ErrPage/ErrorPage';
+import Header from './components/Header/header';
+import Home from './components/Home/home';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: (
+      <SApp>
+        <Header />
+        <Home />
+      </SApp>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/about',
+    element: (
+      <SApp>
+        <Header />
+        <Home />
+      </SApp>
+    ),
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
-)
+);
