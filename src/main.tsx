@@ -7,6 +7,7 @@ import { SApp } from './app-style';
 import ErrorPage from './components/ErrPage/ErrorPage';
 import Header from './components/Header/header';
 import Home from './components/Home/home';
+import Fotter from './components/Fotter/fotter';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       <SApp>
         <Header />
         <Home />
+        <Fotter />
       </SApp>
     ),
     errorElement: <ErrorPage />,
@@ -31,7 +33,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <RouterProvider router={router} />
+  // </React.StrictMode>
 );

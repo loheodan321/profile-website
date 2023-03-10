@@ -37,9 +37,10 @@ export const SHeaderContent = styled.div`
 
 export const SMenuBtn = styled.div`
   display: flex;
-  z-index: 1;
   font-size: 24px;
-  @media (min-width: 767px) {
+  padding: 12px 0px;
+  padding-left: 12px;
+  @media (min-width: 768px) {
     display: none;
   }
 `;
@@ -56,13 +57,15 @@ export const SNavBar = styled.div`
   letter-spacing: 1px;
   position: fixed;
   top: 90px;
-  left: ${(props: boolean) => {
+
+  left: ${(props: any) => {
     if (props.active) {
       return '0%';
     } else {
       return '-100%';
     }
   }};
+
   background-color: white;
   span:hover {
     color: #986c6a;

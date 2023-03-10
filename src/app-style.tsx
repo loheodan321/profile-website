@@ -17,24 +17,30 @@ export const SShopNowBtn = styled.button`
   background-color: white;
   border: 1px solid black;
   transition: all 0.4s;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
   :hover {
     color: white;
     background-color: black;
     border: 1px solid black;
+
+    a {
+      color: white;
+    }
   }
+
   @media (min-width: 768px) {
-    font-size: 16px;
-    width: 150px;
-    height: 45px;
+    font-size: 14px;
+    width: 120px;
+    height: 40px;
   }
+
   @media (min-width: 1024px) {
     font-size: 18px;
     width: 150px;
     height: 45px;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
   }
 `;
