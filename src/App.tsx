@@ -6,7 +6,7 @@ import Home from './components/Home/home';
 function App() {
   return (
     <>
-      <div>con cặc</div>
+      <div>Testing</div>
     </>
   );
 }

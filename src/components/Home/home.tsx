@@ -9,7 +9,6 @@ import {
   SHomeBannerContent,
   SHomeLogin,
   SHomeLoginBtn,
-  SHomeGallary,
 } from './home-style';
 import { SShopNowBtn } from '../../app-style';
 import { Link } from 'react-router-dom';
@@ -91,7 +90,6 @@ const Home = () => {
         <label>For some art tips</label>
         <SHomeLoginBtn>Sign in</SHomeLoginBtn>
       </SHomeLogin>
-      <SHomeGallary>This is Gallary</SHomeGallary>
     </SHome>
   );
 };

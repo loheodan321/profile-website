@@ -13,8 +13,9 @@ export const SBackGround = styled.div`
   height: 360px;
   background: url('https://images.unsplash.com/photo-1576016770956-debb63d92058?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1926&q=80');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 40% center;
   background-attachment: fixed;
+  background-size: cover;
 
   @media (min-width: 768px) {
     height: 760px;
@@ -248,5 +249,3 @@ export const SHomeLoginBtn = styled.button`
     height: 44px;
   }
 `;
-
-export const SHomeGallary = styled.div``;

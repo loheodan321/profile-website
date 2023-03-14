@@ -7,6 +7,7 @@ import {
   SCartBtn,
   SCartAmount,
   SBanner,
+  SFilterBy,
 } from './header-style';
 import { GrMenu, GrCart } from 'react-icons/gr';
 import { useState } from 'react';

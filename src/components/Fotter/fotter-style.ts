@@ -4,6 +4,7 @@ export const SFotter = styled.div`
   width: 95%;
   height: 234px;
   padding-bottom: 42px;
+  margin-top: 12px;
 
   display: flex;
   flex-direction: column;
@@ -32,6 +33,10 @@ export const SFotterContent = styled.div`
   @media (min-width: 1024px) {
     align-items: center;
     width: 30%;
+  }
+
+  :hover {
+    cursor: pointer;
   }
 `;
 
