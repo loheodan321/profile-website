@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import {
   SProduct,
   SItem,
@@ -12,10 +12,28 @@ import { _axios } from '../../Repository/connection';
 import { CItem } from '../../Models';
 import { JsonConvert } from 'json2typescript';
 import { useHttp } from '../../Repository/connection';
+import { SContact } from '../../testing/style-test';
 
 const Product = () => {
-  const [initData, setInitData] = useState<CItem[]>([]);
   const { get } = useHttp();
+
+  const [initData, setInitData] = useState<CItem[]>([]);
+  const listItem = useRef<any>(null);
+
+  let scrollTo = useMemo(() => {
+    return 0;
+  }, []);
+
+  const scrollHandler = (index: number) => {
+    if (scrollTo < initData.length) {
+      scrollTo++;
+    }
+    if (scrollTo > initData.length) {
+      scrollTo = 0;
+    }
+    console.log(scrollTo);
+    listItem.current.scrollIntoView(initData[index]);
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -42,7 +60,7 @@ const Product = () => {
     <>
       <SProduct>
         {initData?.map((item) => (
-          <SItem key={item.id}>
+          <SItem key={item.id} ref={listItem}>
             <img src={`${item.imgSrc}`} alt={`${item.id}-img`} />
             <SItemWrapper>
               <span>Item ID: {item.id}</span>
@@ -62,6 +80,13 @@ const Product = () => {
           </SItem>
         ))}
       </SProduct>
+      <button
+        onClick={() => {
+          scrollHandler(scrollTo);
+        }}
+      >
+        Scroll
+      </button>
     </>
   );
 };
