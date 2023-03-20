@@ -14,7 +14,7 @@ export default function ErrorPage() {
         <i>{error.statusText || error.message}</i>
       </p>
       <SCloseNav>
-        <Link to={'/'}>{/* <FaRegWindowClose /> */}X</Link>
+        <Link to={'/'}>X</Link>
       </SCloseNav>
     </SErrorPage>
   );
